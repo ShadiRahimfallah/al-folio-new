@@ -1,65 +1,31 @@
 ---
 layout: page
-title: projects
-permalink: /projects/
-description: A growing collection of your cool projects.
+title: research
+permalink: /research/
+description: Working papers, master's thesis, publication, and research experience.
 nav: true
-nav_order: 3
-display_categories: [work, fun]
-horizontal: false
+nav_order: 2
 ---
 
-<!-- pages/projects.md -->
-<div class="projects">
-{% if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized projects -->
-  {% for category in page.display_categories %}
-  <a id="{{ category }}" href=".#{{ category }}">
-    <h2 class="category">{{ category }}</h2>
-  </a>
-  {% assign categorized_projects = site.projects | where: "category", category %}
-  {% assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal %}
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-  {% endfor %}
+## Working Papers
 
-{% else %}
+- **The Last Mile of Technology Diffusion: Finance, Capability, and the Conversion of Adopted Technology**
+- **Used Capital and the Allocation of Entrepreneurial Opportunity under Financial Frictions**
+- **Shadow Cost of Funds, Collateral Constraints, and Used Capital: A Model of Capital Misallocation**
 
-<!-- Display projects without categories -->
+## Master's Thesis
 
-{% assign sorted_projects = site.projects | sort: "importance" %}
+**The Effect of Shale Gas Expansion on the Attractiveness of Iran's Petrochemical Industry**
+Master's thesis, University of Tehran, 2019. Supervisor: Farkhondeh Jabalameli.
 
-  <!-- Generate cards for each project -->
+### Selected Publication from the Thesis
 
-{% if page.horizontal %}
+Farkhondeh Jabalameli and Shadi Rahimfallah, "Geoeconomics of Global Energy Transformation: Exploring the Dynamic Linkages between Oil Prices, Polyethylene Costs, and Shale Gas in the United States," *Journal of World Sociopolitical Studies*, 7(1), 55–87, January 2023.
 
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-{% endif %}
-</div>
+This publication was developed from the U.S. energy-price component of my master's thesis.
+
+## Research Experience
+
+- **Research Assistant**, York University (2023–Present) — Supervisors: Tasso Adamopoulos and Chaoran Chen
+- **Electricity Industry Project** (2021) — Supervisor: Jeremy Lin
+- **University of Tehran** (2018) — Supervisor: Farkhondeh Jabalameli
